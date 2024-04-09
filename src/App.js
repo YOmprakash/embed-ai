@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Sidebar from './components/Sidebar';
+import Create from './components/Create'; // Import the Create component
+import ChatPage from './components/ChatPage';
 
 function App() {
+  const [chats, setChats] = useState([]);
+
+  const handleCreateCharacter = (characterName) => {
+    setChats([...chats, characterName]);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar chats={chats}  />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<Create onCreateCharacter={handleCreateCharacter} />} />
+        <Route path="/chat/:chat" element={<ChatPage />} />
+      </Routes>
     </div>
   );
 }

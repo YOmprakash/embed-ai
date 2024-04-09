@@ -1,0 +1,42 @@
+.home-section{
+   width: 100%;
+    min-height: 100vh;
+    background-color: #18181b;
+overflow-y: scroll;
+transition: width 0.3s ease-in-out;
+}
+
+.home-container {
+    padding: 42px 32px;
+}
+
+.name-container p{
+    color: #a2a2ac;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.home-inner-container{
+    display: flex;
+}
+
+.name-search-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    background-color: #202024;
+    padding: 15px 15px;
+    border-radius: 20px;
+}
+.search-container input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 260px;
+    margin-left: 8px;
+}
