@@ -1,9 +1,12 @@
 .home-section{
    width: 100%;
+   max-width: 80vw;
     min-height: 100vh;
     background-color: #18181b;
 overflow-y: scroll;
 transition: width 0.3s ease-in-out;
+margin-left: 0px;
+
 }
 
 .home-container {
@@ -40,3 +43,56 @@ transition: width 0.3s ease-in-out;
     width: 260px;
     margin-left: 8px;
 }
+.for-you-bg-card{
+  
+    padding: 10px;
+    margin-top: 20px;
+}
+  .for-you-card{
+    display: flex;
+    align-items: center;
+    background-color: #202024;
+   
+    padding: 10px;
+    height: 130px;
+    border-radius: 14px;
+  }
+  .slick-slide img {
+    width: 100%;
+   max-width: 90px;
+   height: 100%;
+   max-height: 110px;
+   border-radius: 14px;
+  object-fit: cover;
+  }
+
+  .for-you-card-info{
+text-align: start;
+color: #fafafa;
+margin-left: 5px;
+  }
+
+  .for-you-card h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .for-you-card-info {
+    padding: 10px;
+  }
+  
+  .for-you-card-info p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .for-you-card-info .likes {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+  
+  .dots-icon {
+    cursor: pointer;
+  }
+  

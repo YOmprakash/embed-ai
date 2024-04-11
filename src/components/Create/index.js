@@ -1,32 +1,25 @@
-import React from 'react'
+// In your Create component
+import React, { useContext ,useEffect,useState} from 'react';
 import { IconChevronLeft,IconBook2 } from '@tabler/icons-react';
 import './index.css'
-import { Link, useNavigate } from 'react-router-dom'; // Import useHistory
+import { Link, useNavigate } from 'react-router-dom'; 
+import { CharacterContext } from '../../context/CharacterContext';
 
-export default function Create({onCreateCharacter}) {
-  const [characterName, setCharacterName] = React.useState('');
-  const [characterTagline, setCharacterTagline] = React.useState('');
-  const [characterDescription, setCharacterDescription] = React.useState('');
-  const [characterGreeting, setCharacterGreeting] = React.useState('');
+export default function Create() {
+  const { characterName, setCharacterName, characterTagline, setCharacterTagline, characterDescription, setCharacterDescription, characterGreeting, setCharacterGreeting,chats, setChats  } = useContext(CharacterContext);
+  const navigate = useNavigate(); 
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const history = useNavigate(); // Initialize useHistory
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    onCreateCharacter(characterName);
-    history(`/chat/${characterName}`); // Navigate to the chat page
-
-    // Clear the input fields
-    setCharacterName('');
-    setCharacterTagline('');
-    setCharacterDescription('');
-    setCharacterGreeting('');
+    setChats([...chats, characterName]);
+    navigate(`/chat/${characterName}`);
   }
 
-
   const isButtonDisabled = !(characterName || characterTagline || characterDescription || characterGreeting);
+
   return (
-    
     <div className='create-section'>
       <div className='create-container'>
         <div className='back-book-container'>
@@ -61,7 +54,6 @@ export default function Create({onCreateCharacter}) {
             </form>
         </div>
       </div>
-    
     </div>
   )
 }

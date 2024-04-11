@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import { IconPlus } from  '@tabler/icons-react';
 import { IconChevronsLeft,IconMenu,IconBrandSafari ,IconDots,IconChevronDown} from '@tabler/icons-react';
-
+import { CharacterContext } from '../../context/CharacterContext';
 import './index.css'
 import { Link } from 'react-router-dom';
-export default function Sidebar({chats}) {
+export default function Sidebar() {
+  const { chats } = useContext(CharacterContext);
     const [isOpen, setIsOpen] = React.useState(true);
   return (
     <div className='sidebar-wrapper'>
@@ -39,6 +40,7 @@ export default function Sidebar({chats}) {
     {chats.map((chat, index) => (
 <Link to={`/chat/${chat}`} className='logo-link'>
                             <div key={index} className='sidebar-chats-container'>
+                           
                              <div className='chat-logo-name-container'>
                              <div className='chat-logo'>
                              <span>{chat.slice(0, 1)}</span>
@@ -47,6 +49,7 @@ export default function Sidebar({chats}) {
                              </div>
                                 <IconDots color='#a2a2ac'  size={24} />
                             </div>
+                          
                              </Link>  
                         ))}
     </div>
