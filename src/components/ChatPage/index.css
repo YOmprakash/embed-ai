@@ -8,7 +8,21 @@
   
   }
 
+.Name{
+  color:#fff;
+  font-size: 18px;
+  font-family: sans-serif;
+  
 
+}
+
+.tag-id{
+  color: #a2a2ac;
+  font-size: 12px;
+  font-family: sans-serif;
+
+
+}
   .chat-name-btn-container{
       display: flex;
       align-items: center;
@@ -20,6 +34,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0px 10px;
+      text-align: left;
   }
   .chat-name-logo{
       width: 30px;
@@ -33,6 +48,7 @@
   }
   .chat-name-logo span{
       color:#fafafa;
+      font-size: 18px;
   }
   
     
@@ -62,22 +78,26 @@
       color: #000;
       margin-right: 1rem;
     }
-    
-    .name {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
+   
     
     .dots-icon {
       cursor: pointer;
     }
     .chat-header{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+
+    
   
     }
     
     .chat-inner-container {
-min-height: 450px;
+      height: 450px;
  
 overflow-y:scroll ;
 
@@ -112,6 +132,13 @@ overflow-y:scroll ;
       border: #3f3f46 solid 1px;
     
       margin: auto;
+    }
+
+    .add{
+      padding: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
     }
     
     .chat-input-container input {

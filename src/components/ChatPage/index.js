@@ -21,8 +21,8 @@ export default function ChatPage() {
     <span>{characterName.slice(0,1)}</span>
   </div>
   <div>
-  <p className='name'>{characterName}</p>
-   <span>@by omprakash</span>
+  <p className='Name'>{characterName}</p>
+   <span className='tag-id'>@by omprakash</span>
    
   </div>
   
@@ -32,7 +32,12 @@ export default function ChatPage() {
         <div className='chat-header'>
 '
         <div className='chat-inner-container'>
-       
+        <div className='chat-name-logo add'>
+    <span>{characterName.slice(0,1)}</span>
+  </div>
+  <p>{characterName}</p>
+  <p>{characterTagline}</p>
+  <p className='tag-id'>By @omprakash</p>
           <div className='chat-messages'>
            <p>{message}</p>
           </div>
