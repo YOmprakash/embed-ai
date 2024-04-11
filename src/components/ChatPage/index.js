@@ -29,6 +29,8 @@ export default function ChatPage() {
    </div>
 <IconDots   color='#a2a2ac'  size={24} className='dots-icon'/>
         </div>
+        <div className='chat-header'>
+'
         <div className='chat-inner-container'>
        
           <div className='chat-messages'>
@@ -41,6 +43,8 @@ export default function ChatPage() {
             send
           </button>
         </div>
+        <p className='note'>Remember: Everything Characters say is made up!</p>
+      </div>
       </div>
     </div>
   )

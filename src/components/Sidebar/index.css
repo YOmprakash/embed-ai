@@ -7,7 +7,8 @@
     background-color: #131316;
     width: 15rem;
    border-right: 1px solid #26272b;
-  
+  position: absolute;
+  z-index: 100;
 }
 .logo{
     
@@ -106,10 +107,13 @@ margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 30px;
     cursor: pointer;
+    
   
 }
 .sidebar-button:hover{
     background-color: #3f3f46;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -136,12 +140,19 @@ margin-bottom: 10px;
 
 .menu-icon{
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 20px;
     animation: fadeIn 0.3s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all;
+    
 }
+
 
 @keyframes fadeIn {
     to {
@@ -167,21 +178,31 @@ flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    overflow-y: scroll;
+    padding: 10px ;
+   
     max-height: 100px;
-  
+    border-radius: 8px;
 }
 
 .sidebar-chats-container:hover{
     background-color: #3f3f46;
-    border-radius: 8px;
+  
   
 }
 .chat-logo-name-container{
     display: flex;
     align-items: center;
     color: #fafafa;
+}
+.chat-logo-name-container p{
+    color: #fff;
+    font-size: 12px;
+    font-family: sans-serif;
+
+    
+
+  
+    
 }
 
 .chat-logo{
@@ -196,6 +217,16 @@ align-items: center;
 justify-content: center;
 
 }
+/* Initially hide the IconDots */
+.IconDots {
+    display: none;
+}
+
+/* Show the IconDots when the parent container is hovered */
+.sidebar-chats-container:hover .IconDots {
+    display: block;
+}
+
 
 .name-logo-container{
     display: flex;
@@ -213,7 +244,13 @@ justify-content: center;
 
 }
 
-.name{
+.name-logo span{
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.Name{
     color: #fafafa;
     font-size: 12px;
     font-family: sans-serif;

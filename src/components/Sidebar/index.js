@@ -9,7 +9,9 @@ export default function Sidebar() {
     const [isOpen, setIsOpen] = React.useState(true);
   return (
     <div className='sidebar-wrapper'>
-    {!isOpen && <IconMenu color='#fff' onClick={() => setIsOpen(true)} className='menu-icon' />}
+    {!isOpen &&<button type='button' className='menu-icon' onClick={() => setIsOpen(true)}>
+    <IconMenu color='#fff' size={24} />
+    </button> }
     <section className={`sidebar ${isOpen ? '' : 'closed'}`}>
 
     <div className='sidebar-container'>
@@ -25,7 +27,7 @@ export default function Sidebar() {
     </div>
    
     <div className='sidebar-button-container'>
-    <Link to='/create' className='logo-link'>
+    <Link to='/create' className='logo-link' >
         <div className='create-btn-container button-span'>
 <IconPlus color='#a2a2ac'  size={24} className='plus-icon'/>
 <button type='button'>Create</button>
@@ -47,7 +49,9 @@ export default function Sidebar() {
                              </div>
                              <p>{chat}</p>
                              </div>
-                                <IconDots color='#a2a2ac'  size={24} />
+                             <div className='IconDots'>
+                <IconDots color='#fff'  size={18} />
+            </div>
                             </div>
                           
                              </Link>  
@@ -61,9 +65,9 @@ export default function Sidebar() {
   <div className='name-logo'>
     <span>O</span>
   </div>
-   <p className='name'> Omprakash</p>
+   <p className='Name'> omprakash</p>
    </div>
-   <IconChevronDown color='#a2a2ac'  size={24} />
+   <IconChevronDown color='#a2a2ac'  size={14} />
  
   </div>
     </div>

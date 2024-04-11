@@ -90,13 +90,13 @@ export default function Home() {
      <div  className={`home-section ${isOpen ? '' : 'expanded'}`}>
      <div className='home-container'>
 <div className='name-search-container'>
-    <div className='name-container'>
+    <div className='home-name-container'>
         <p>Welcome back,</p>
-        <div className='name-logo-container'>
-  <div className='name-logo'>
+        <div className='home-name-logo-container'>
+  <div className='home-name-logo'>
     <span>O</span>
   </div>
-   <p className='name'> Omprakash</p>
+   <p className='h-name'> Omprakash</p>
    </div>
     </div>
     <div className='search-container'>
@@ -104,30 +104,30 @@ export default function Home() {
         <input type="text" placeholder='Search for Characters'/>
        
     </div>
-</div>
+  </div>
 
-<Slider {...settings}>
-          {peopleList.map(person => (
-            <div key={person.id} className='for-you-bg-card'>
-            <div  className='for-you-card'>
-              <img src={person.imgUrl} alt={person.name} />
-              <div className='for-you-card-info'>
-              <h2>{person.name}</h2>
-              <p>{person.about}</p>
-              <div className=''>
-<div>
-  <IconMessageCircle color='#a2a2ac'  size={16} />
-  <span className='likes'>  {person.likes}</span>
-</div>
-<IconDots color='#a2a2ac'  size={16} className='dots-icon'/>
+  {/*<Slider {...settings}>
+            {peopleList.map(person => (
+              <div key={person.id} className='for-you-bg-card'>
+              <div  className='for-you-card'>
+                <img src={person.imgUrl} alt={person.name} />
+                <div className='for-you-card-info'>
+                <h2>{person.name}</h2>
+                <p>{person.about}</p>
+                <div className=''>
+  <div>
+    <IconMessageCircle color='#a2a2ac'  size={16} />
+    <span className='likes'>  {person.likes}</span>
+  </div>
+  <IconDots color='#a2a2ac'  size={16} className='dots-icon'/>
+                </div>
+              
+                </div>
+                </div>
+              
               </div>
-             
-              </div>
-              </div>
-            
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>*/}
 
 </div>
      </div>
